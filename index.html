@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <title>Welcome to Birds of Auckland</title>
+</head>
+
+<body>
+    <div class="maincontainer">
+        <div class="header">
+            <a href="./index.html" class="home">
+                <img src="./images/bird-black.png" alt="Black Bird Icon" width="40px">Birds Home</a>
+            <a href="./about.html" class="about">About</a>
+            <a href="./contact.html" class="contact">Contact</a>
+            <a href="./list.html" class="list">Bird List</a>
+
+            <div class="search-container">
+                <form>
+                    <input type="search" id="mySearch" placeholder="Search for Birds..." name="q" class="search-bar">
+                    <button class="seach-button" type="submit" formaction="thankyou.html">Search</button> </form>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+        <div class="fill">
+            <img src="./images/auckland-skyline-grey-with-Birds.png" alt="Auckland Skyline Silouhette">
+        </div>
+        <br>
+        <div id="topfill"></div>
+        <br>
+        <br>
+        <div class="lower-part">
+            <div class="link-box">
+                <a href="./bygps.html">
+                    <img src="./images/gpsIcon.png" alt="GPS Icon" height="90px" class="topimage">Search by your location</a><br><br><br><br><br>
+                <a href="./bypicture.html">
+                    <img src="./images/ostrich_PNG9.png" alt="Ostrich Icon" height="90px"> Birds By Pictures</a><br><br><br><br><br><br>
+                <a href="./events.html">
+                    <img src="./images/Binoculars.png" alt="Binoculars" height="90px" class="bottom-right"> Bird Watching Events in Auckland</a>
+            </div>
+            <br>
+            <div class="text-box">
+                <h2>A Message From The Developers:</h2>
+                <p> Hello and welcome to Auckland, the city of sails! <br><br>
+                    Whether you are visiting, staying for the summer, or living here, and if you like nature and birds, you are in the right place! <br><br>
+                    We have created this website specifically with people like in mind who would like to know more about our beautiful local birds, their origins, habitats, habits, sounds, and much more. <br>
+                    You will also find a link to current bird watching events that take place around Auckland. <br>
+                    We would like to appologise in advance if the site is not yet fully functional, and would like to inform you that it is due to the fact that it is still being developed. <br>
+                    Please enjoy surfing through our website as much as you enjoy your stay with us!
+
+                </p>
+            </div>
+        </div>
+    </div>
+    <script type="text/babel">
+        class Shape extends React.Component {
+		constructor(props,context) {
+		super(props,context);
+		this.state = {
+		change:0
+	};
+	this.timerTick = this.timerTick.bind(this);
+	}
+	timerTick() {
+	this.setState({
+	change: this.state.change
+});
+}
+componentDidMount() {
+	setInterval(this.timerTick,750);
+}
+render() {
+    var colors = ["#77b3d1", "#E94F37", "#1C89BF", "#A1D363", "#85FFC7", "#297373", "#FF8552",
+    "#A40E4C", "#85AFC0", "#296573", "#AA8552", "#CC0E4C", "#567187", "#c6c976", "#967c64",
+    "#e497ed", "#d24cff", "#e2ceb1", "#cc999e", "#97bf9a", "#01FF70","#7FDBFF","#F012BE","#B10DC9","#FFDC00","#FF4136"];
+    var fontcolors = ["#B8C2CC","#DAE1E7","#F1F5F8","#F8FAFC","#FFFFFF","#F9ACAA","#FCEBEA","#FCD9B6","#FFF5EB","#FFF9C2","#FCFBEB","#51D88A","#A2F5BF","#E3FCEC","#64D5CA","#A0F0ED","#E8FFFE","#6CB2EB","#BCDEFA","#EFF8FF","#B2B7FF","#E6E8FF","#D6BBFC","#F3EBFF","#FA7EA8","#FFBBCA","#FFEBEF","#F2F2F2","#F3F2F2","#F4F1F1","#F4F0F0","#F5EFEF","#F7EEEE","#F7EDED","#F8EDED","#F9ECEC","#F9EBEB","#FAEBEB","#FAEAEA","#FBEAEA","#FBE9E9","#FCE8E8","#FFFAFA","#F5F0F0","#F8EEEC","#F3F2F1","#F3F2F1"];
+// very light colors:     ,"#F2F2F2","#F3F2F2","#F4F1F1","#F4F0F0","#F5EFEF","#F7EEEE","#F7EDED","#F8EDED","#F9ECEC","#F9EBEB","#FAEBEB","#FAEAEA","#FBEAEA","#FBE9E9","#FCE8E8","#FFFAFA","#F5F0F0","#F8EEEC","#F3F2F1","#F3F2F1"
+// Very dark colors ,"#191919","#323232","#4c4c4c","#"000019,"#000033","#000066","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#","#"
+    var backgroundcolors = ["#3B0D0C","#462A16","#453411","#451225","#191919","#323232","#4c4c4c","#000019","#000033","#000066"];
+    
+    var ran = Math.floor(Math.random()*colors.length);
+    var ran2 = (ran - ((colors.length)%3));
+    var ran3 = (ran -((colors.length)%5));
+    var ran4 = (ran -((colors.length)%7));
+    var fontran1 = (ran-5); 
+//    var backgroundran1 = (ran-10);
+    
+var shapeStyle={
+    position: 'relative',
+    padding: 10,
+    margin: '0 auto',
+    display:'block',
+    border:'4px double',
+    borderTopColor: colors[ran],
+    borderBottomColor: colors[ran2],
+    borderRightColor: colors[ran3],
+    borderLeftColor: colors[ran4],
+    backgroundColor: 'null',
+    borderRadius: 5,
+    width: '90%',
+    height: '100%',
+    textAlign: 'center',
+    fontSize: '1.2em',
+    color: backgroundcolors[backgroundran1],
+    backgroundColor: fontcolors[ran-10],
+};
+    
+return(
+    <div style={shapeStyle}> Visit us at our new location in 6<sup>th</sup> floor, 500 Queens Street- Auckland CBD
+    </div>
+);
+}
+	};
+
+
+	var renderData = [];
+	for (var i=0;i<1;i++) {
+	renderData.push(<Shape key={i}/>);
+}
+ReactDOM.render(
+<div>
+	{renderData}
+</div>,
+document.getElementById("topfill")
+);
+	</script>
+</body>
+
+</html>

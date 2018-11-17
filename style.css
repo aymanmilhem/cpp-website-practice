@@ -1,0 +1,327 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color:#deeff5;
+/*        ,#add8e6,#b5dbe8, #bddfeb, #c5e3ed, #cde7f0, #d6ebf2, #deeff5, #e6f3f7, #eef7fa, #f6fbfc, #ffffff*/
+/*    background-image: linear-gradient(to bottom right, #add8e6,#add8e6,#b5dbe8, #bddfeb, #c5e3ed, #cde7f0, #d6ebf2, #deeff5, #e6f3f7, #eef7fa, #f6fbfc, #ffffff);*/
+/*    background: linear-gradient(to bottom, #F0F8FF 0%, #E1E9F0 100%);*/
+    font-family: 'Open Sans', sans-serif;
+}
+
+.maincontainer {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*
+div .maincontainer {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+}
+*/
+
+.header {
+/*    background: aliceblue;*/
+    background-image: linear-gradient(to bottom, #add8e6,#add8e6,#b5dbe8, #bddfeb, #c5e3ed, #cde7f0, #d6ebf2, #deeff5, #e6f3f7, #eef7fa, #f6fbfc, #ffffff);
+    position: sticky;
+    top: 0;
+    opacity: 0.8;
+    z-index: 5;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.header a {
+    float: left;
+    clear: right;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 25px;
+    text-shadow: 2px 2px 7px grey;
+}
+
+.header a:hover {
+/*    background-color: dimgray;*/
+/*
+    background-image: linear-gradient(to top left, #696969, #808080,#A9A9A9,#C0C0C0, #D3D3D3, #DCDCDC, #FFFFFF);
+    color: white;
+    border-radius: 5px;
+*/
+    box-shadow: 0 0 25px navy;
+    border-radius: 15px;
+}
+
+.header .search-container {
+    display: block;
+    float: right;
+    position: relative;
+    right: 0px;
+    top: 0px;
+    margin-top: 30px;
+}
+
+.search {
+    width: 100%;
+    position: relative;
+}
+
+.fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+/*    border-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0)) 1 100%;*/
+/*    width: 100%;*/
+    /*
+    max-height: 350px;
+    width: 100%;
+*/
+}
+
+.fill img {
+    flex-shrink: 0;
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: 2px 2px 30px navy;
+}
+
+
+
+/* Note to self:  when the display is set to block, the problem of the two child divs not aligning rises! (the top of the second div is lower than the first one!!), when set to flex, it goes!! f/o what is happenning?? */
+.lower-part {
+    display: flex;
+}
+
+.link-box {
+    display: block;
+    width: 385px;
+    height: 360px;
+    padding-top: 10px;
+    box-shadow: 2px 2px 30px navy;
+/*
+    border-image:
+      linear-gradient(to bottom, black, rgba(0, 0, 0, 0)) 1 100%;
+*/
+/*    border: darkturquoise solid 1px;*/
+    background-image: linear-gradient(to bottom right, #add8e6,#add8e6,#b5dbe8, #bddfeb, #c5e3ed, #cde7f0, #d6ebf2, #deeff5, #e6f3f7, #eef7fa, #f6fbfc, #ffffff);
+    position: absolute;
+    left: 3em;
+}
+
+.link-box a {
+    padding: 20px;
+    float: right;
+    color: black;
+}
+
+.link-box a:hover {
+    color: lime;
+    background-color: rgb(1, 28, 51);
+}
+
+.link-box img {
+    display: inline-block;
+    padding-bottom: 15px;
+    margin-top: 0;
+    margin-bottom: 3px;
+    color: black;
+    position: absolute;
+    left: 0;
+}
+.topimage {
+    top: 10px;
+}
+
+.link-box img:hover {
+    border: darkorange 2px dotted;
+}
+
+
+.text-box {
+    display: block;
+    position: absolute;
+    right: 3em;
+/*    border: black 1px dotted;*/
+    width: 800px;
+    max-width: 60%;
+    max-height: 100%;
+/*    background-color: aqua;*/
+    background-image: linear-gradient(to bottom right, #add8e6,#add8e6,#b5dbe8, #bddfeb, #c5e3ed, #cde7f0, #d6ebf2, #deeff5, #e6f3f7, #eef7fa, #f6fbfc, #ffffff);
+    overflow: scroll;
+    box-shadow: 2px 2px 30px navy;
+}
+
+.text-box p {
+    font-size: 18px;
+    text-indent: 3px;
+}
+
+
+
+/* css for about page */
+.text-box-about {
+    text-align: center;
+    display: block;
+    position: relative;
+    /*    border: black 1px dotted;*/
+    width: 70%;
+    margin: 0 auto;
+    background-image: linear-gradient(to right, #d2ebf9 0%, #feffff 100%);
+}
+
+.text-box-about p {
+    font-size: 25px;
+}
+
+/*css for contact page*/
+
+/*css for list page*/
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+.top {
+    top: 0;
+    padding-left: 20px;
+}
+
+.bottom {
+    bottom: 0;
+}
+
+.bottom-right img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/*css for contact page*/
+
+.div-form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.div-form form label {
+    display: inline-block;
+    width: 130px;
+    /*    border: 1px solid black;*/
+    margin-right: 2px;
+}
+
+.div-form form input {
+    display: inline-block;
+    width: 300px;
+    padding: 4px 2px;
+    background: linear-gradient(to right, #d2ebf9 0%, #feffff 100%);
+}
+
+.div-form form select {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    background: linear-gradient(to bottom, #d2ebf9 0%, #feffff 100%);
+}
+
+.div-form form textarea {
+    background: linear-gradient(to left, #d2ebf9 0%, #feffff 40%);
+}
+
+.div-form form input[type="submit"] {
+    display: block;
+    width: 30%;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+#topfill {
+            position: relative;
+			padding: 0;
+/*			background-color: whitesmoke;*/
+            width: 90%;
+            height: 100%;
+            margin: 0 auto;
+            border-radius: 5px;
+		}
+
+@media only screen and (max-width: 1024px) {
+    .link-box {
+        display: block;
+        width: 40%;
+        position: absolute;
+        left: 0;
+        background-color: antiquewhite;
+    }
+
+    .link-box a {
+        display: inline-block;
+        max-width: 70%;
+        text-align: right;
+    }
+
+    .link-box img {
+        display: inline-block;
+        max-width: 30%;
+    }
+
+    .text-box {
+        display: block;
+        width: 50%;
+        position: absolute;
+        right: 0;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+    .header a {
+        font-size: 0.9em;
+        display: grid;
+    }
+
+    .header a img {
+        display: none;
+    }
+
+    .header .search-container {
+        float: left;
+    }
+
+    .fill {
+        display: none;
+    }
+
+    .text-box {
+        width: 50%;
+        max-height: 100%;
+        word-break: break-word;
+        padding-left: 3px;
+        padding-right: 2px;
+    }
+
+    .text-box h2 {
+        font-size: 0.9em;
+    }
+
+    .text-box p {
+        font-size: 0.8em;
+    }
+
+    .link-box {
+        width: 50%;
+        font-size: 0.8em;
+    }
+}
